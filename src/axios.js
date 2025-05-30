@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export const makeRequest = axios.create({
-  baseURL: "http://localhost:8800/api", // Adjust as necessary
+  baseURL: "http://kittitat.trueddns.com:45136/api", // Adjust as necessary
   withCredentials: true, // Required for cookies
 });

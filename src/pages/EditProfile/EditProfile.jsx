@@ -25,7 +25,7 @@ const EditProfile = () => {
     const fetchProfileData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8800/api/users/find/${userId}`
+          `http://kittitat.trueddns.com:45136/api/users/find/${userId}`
         );
         setProfileData({
           username: response.data.username,
@@ -61,7 +61,7 @@ const EditProfile = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8800/api/uploads/file",
+        "http://kittitat.trueddns.com:45136/api/uploads/file",
         formData
       );
       const uploadedFileUrl = response.data.url; // Use the returned URL
@@ -76,7 +76,7 @@ const EditProfile = () => {
   const handleSaveProfile = async () => {
     try {
       const response = await axios.put(
-        "http://localhost:8800/api/users",
+        "http://kittitat.trueddns.com:45136/api/users",
         {
           username: profileData.username,
           description: profileData.bio,

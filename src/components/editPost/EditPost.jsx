@@ -18,7 +18,7 @@ const EditPost = () => {
   useEffect(() => {
     const fetchPostDetails = async () => {
       try {
-        const res = await axios.get(`http://localhost:8800/api/posts/${postId}`, {
+        const res = await axios.get(`http://kittitat.trueddns.com:45136/api/posts/${postId}`, {
           withCredentials: true,
         });
         const post = res.data;
@@ -46,7 +46,7 @@ const EditPost = () => {
         formData.append("file", file);
 
         const res = await axios.post(
-          "http://localhost:8800/api/uploads/file",
+          "http://kittitat.trueddns.com:45136/api/uploads/file",
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -89,7 +89,7 @@ const EditPost = () => {
       };
 
       // Update post via API
-      await axios.put(`http://localhost:8800/api/posts/${postId}`, updatedPost, {
+      await axios.put(`http://kittitat.trueddns.com:45136/api/posts/${postId}`, updatedPost, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       });

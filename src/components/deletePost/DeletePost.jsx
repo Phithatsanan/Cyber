@@ -6,7 +6,7 @@
 
 //   const handleDelete = async () => {
 //     try {
-//       await axios.delete(`http://localhost:8800/api/posts/${postId}`, {
+//       await axios.delete(`http://kittitat.trueddns.com:45136/api/posts/${postId}`, {
 //         withCredentials: true,
 //       });
 //       onDeleteSuccess(postId); 
@@ -66,7 +66,7 @@ const DeletePost = ({ isOpen, postId, onClose, onDeleteSuccess }) => {
   const handleDelete = async () => {
     try {
       // Send DELETE request to the backend API
-      await axios.delete(`http://localhost:8800/api/posts/${postId}`, {
+      await axios.delete(`http://kittitat.trueddns.com:45136/api/posts/${postId}`, {
         withCredentials: true, // Include cookies for authentication
       });
       // Notify parent component about successful deletion

@@ -30,7 +30,7 @@ const Register = () => {
         setErr(null); // Clear previous errors
         setLoading(true); // Start loading
         try {
-            await axios.post("http://localhost:8800/api/auth/register", inputs);
+            await axios.post("http://kittitat.trueddns.com:45136/api/auth/register", inputs);
             setLoading(false); // Stop loading
 
             alert("Registration successful!");

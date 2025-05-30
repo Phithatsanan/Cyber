@@ -18,12 +18,12 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const userResponse = await axios.get(`http://localhost:8800/api/users/find/${userId}`, {
+        const userResponse = await axios.get(`http://kittitat.trueddns.com:45136/api/users/find/${userId}`, {
           withCredentials: true,
         });
         setUserData(userResponse.data);
 
-        const postsResponse = await axios.get(`http://localhost:8800/api/posts?userId=${userId}`, {
+        const postsResponse = await axios.get(`http://kittitat.trueddns.com:45136/api/posts?userId=${userId}`, {
           withCredentials: true,
         });
 

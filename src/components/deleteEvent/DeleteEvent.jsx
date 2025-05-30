@@ -8,7 +8,7 @@ const DeleteEvent = ({ isOpen, onClose, eventId, onEventDeleted }) => {
   const handleDelete = async () => {
     try {
       // Make the API call to delete the event
-      await axios.delete(`http://localhost:8800/api/event/${eventId}`, {
+      await axios.delete(`http://kittitat.trueddns.com:45136/api/event/${eventId}`, {
         withCredentials: true,
       });
       console.log("Event deleted successfully!");

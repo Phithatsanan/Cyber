@@ -32,7 +32,7 @@ const EditEvent = () => {
     useEffect(() => {
         const fetchEventDetails = async () => {
             try {
-                const res = await axios.get(`http://localhost:8800/api/event/${eventId}`, {
+                const res = await axios.get(`http://kittitat.trueddns.com:45136/api/event/${eventId}`, {
                     withCredentials: true,
                 });
                 const event = res.data;
@@ -71,7 +71,7 @@ const EditEvent = () => {
 
         try {
             const response = await axios.post(
-                "http://localhost:8800/api/uploads/file",
+                "http://kittitat.trueddns.com:45136/api/uploads/file",
                 formData,
                 {
                     headers: { "Content-Type": "multipart/form-data" },
@@ -118,7 +118,7 @@ const EditEvent = () => {
 
             // Update the event
             await axios.put(
-                `http://localhost:8800/api/event/${eventId}`,
+                `http://kittitat.trueddns.com:45136/api/event/${eventId}`,
                 editEvent,
                 {
                     headers: { "Content-Type": "application/json" },

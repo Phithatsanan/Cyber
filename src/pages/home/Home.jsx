@@ -151,7 +151,7 @@ export default function Home() {
               >
                 <div className="flex flex-col gap-2">
                   <img
-                    src={`http://localhost:8800/uploads/${event.img}`}
+                    src={`http://kittitat.trueddns.com:45136/uploads/${event.img}`}
                     alt={event.eventName}
                     className="h-48 w-full rounded-lg object-cover"
                   />

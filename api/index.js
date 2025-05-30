@@ -23,7 +23,7 @@ const server = http.createServer(app); // Server now supports WebSocket
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5173"],
+    origin: ["http://kittitat.trueddns.com:45134", "http://localhost:5173"], // Adjust as necessary
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })

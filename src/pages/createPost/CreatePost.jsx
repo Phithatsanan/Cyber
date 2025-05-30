@@ -26,7 +26,7 @@ const CreatePost = ({ onClose }) => {
         formData.append("file", file);
 
         const uploadResponse = await axios.post(
-          "http://localhost:8800/api/uploads/file",
+          "http://kittitat.trueddns.com:45136/api/uploads/file",
           formData,
           {
             headers: { "Content-Type": "multipart/form-data" },
@@ -73,7 +73,7 @@ const CreatePost = ({ onClose }) => {
         userId: currentUser.id, // Add userId from AuthContext
       };
 
-      await axios.post("http://localhost:8800/api/posts", postData, {
+      await axios.post("http://kittitat.trueddns.com:45136/api/posts", postData, {
         withCredentials: true,
       });
 

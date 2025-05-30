@@ -63,7 +63,7 @@ const CreateEvent = () => {
         const formData = new FormData();
         formData.append("file", image);
     
-        const uploadResponse = await axios.post("http://localhost:8800/api/uploads/file", formData, {
+        const uploadResponse = await axios.post("http://kittitat.trueddns.com:45136/api/uploads/file", formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
@@ -88,7 +88,7 @@ const CreateEvent = () => {
       };
     
       // Create the event
-      await axios.post("http://localhost:8800/api/event", eventPayload, {
+      await axios.post("http://kittitat.trueddns.com:45136/api/event", eventPayload, {
         withCredentials: true,
       });
     
